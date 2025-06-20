@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="assets/icon.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Encryptify</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container" id="container">
+    <button id="themeToggle" title="Toggle Theme">🌙</button>
+    <h1>Encryptify</h1>
+    <div class="file-select-container">
+      <button id="selectFileBtn" type="button">Select Files</button>
+      <span id="selectedFileName" title="Selected file(s) name">No files chosen</span>
+      <input type="file" id="fileInput" multiple />
+    </div>
+    <div class="drop-zone" id="dropZone">Or drag and drop files here</div>
+    <input type="password" id="password" placeholder="Enter password" autocomplete="new-password" />
+    <div id="passwordStrengthContainer">
+      <div id="passwordStrengthBar"></div>
+      <div id="passwordStrengthText">Strength: N/A</div>
+    </div>
+    <div class="actions">
+      <button id="encryptBtn" type="button">Encrypt & Download</button>
+      <button id="decryptBtn" type="button">Decrypt & Download</button>
+    </div>
+    <button id="copyBtn" type="button">Copy Log</button>
+    <textarea id="log" placeholder="Logs will appear here..." readonly></textarea>
+    <div class="preview">
+      <h3>File Preview / Decrypted Files:</h3>
+      <pre id="preview"></pre>
+    </div>
+    <div class="progress-container" aria-label="Progress Bar">
+      <div class="progress-bar" id="progressBar"></div>
+      <div class="progress-text" id="progressText">0%</div>
+    </div>
+  </div>
+
+  <!-- External libs -->
+  <script src="https://cdn.jsdelivr.net/npm/pako@2.1.0/dist/pako.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
