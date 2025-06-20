@@ -1,6 +1,3 @@
-# Encryptify
-A Secure File Encryption Desktop App
-
 # 🔐 Encryptify
 
 ![Encryptify Banner](assets/logo.png)
